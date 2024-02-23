@@ -1,0 +1,169 @@
+body {
+    
+    background-color: papayawhip;
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+    box-sizing: border-box;
+    /* border: 5px solid black;
+    border-radius: 20px; */
+}
+
+
+/* for flex box */
+
+.fb1{
+    /* position: relative;
+    left: 50px;
+    top: 50px; */
+
+    /* position: absolute;
+    left: 20px;
+    top: 0px; */
+    
+    /* position: fixed;
+    left: 20px;
+    top: 20px; */
+
+    /* position: sticky;
+    top: 0px;
+    left: 0px; */
+   
+}
+
+.flex-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.flex-box {
+    width: 400px;
+    height: 350px;
+    background: linear-gradient(rgb(15, 228, 240), rgb(12, 56, 149), rgb(10, 10, 1));
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    line-height: 200px;
+    border-radius: 20px;
+    margin: 20px;
+    box-shadow: 20px 20px 10px black;
+    transition: all ease-in-out 0.5s;
+}
+.flex-box:hover {
+    filter: drop-shadow(8px 8px 8px rgb(106, 248, 4));
+      cursor: pointer;
+      opacity: 0.7;
+      scale: 1.03;
+}
+
+
+
+/* for grid and media querry */
+
+.grid-container {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 30rem 30rem 30rem;
+    grid-template-rows: 30rem 30rem ;
+    
+    
+
+}
+
+.grid-box {
+    width: 400px;
+    height: 350px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin: 20px;
+    border-radius: 30px;
+    background: linear-gradient(rgb(15, 228, 240), rgb(12, 56, 149), rgb(10, 10, 1));
+    padding: 1rem;
+    border-radius: 20px;
+    font-size: 25px;
+    color: white;
+    box-shadow: 20px 20px 10px black;
+    transition: all ease-in-out 0.5s;
+}
+.grid-box:hover{
+    filter: drop-shadow(8px 8px 8px rgb(245, 102, 6));
+      cursor: pointer;
+      opacity: 0.7;
+      scale: 1.03;
+}
+
+/* grid when scrn width upto 700px with change in bgrnd clr */
+@media only screen and (max-width: 850px) {
+    body{
+        
+        background-color: aqua;
+    }
+    .grid-container {
+        margin: 20px;
+        display: grid;
+        grid-template-columns: 30rem;
+        grid-template-rows: 30rem 30rem 30rem 30rem 30re 30rem 30rem 30re 30rem;
+        justify-content: space-around;
+        align-items: center;
+        grid-area: auto;
+    }
+
+    .grid-box {
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        
+        border-radius: 30px;
+        background: linear-gradient(rgb(15, 228, 240), rgb(12, 56, 149), rgb(10, 10, 1));
+        padding: 1rem;
+        border-radius: 20px;
+        height: 400px;
+        color: white;
+        box-shadow: 20px 20px 10px black;
+        transition: all ease-in-out 0.5s;
+    }
+
+}
+/* grid when scrn width in betn 700px to 1000px with change in bgrnd colour */
+@media only screen and (min-width: 850px) and (max-width: 1200px){
+    body{
+        
+        background-color: rgb(185, 243, 128);
+    }
+    .grid-container {
+        margin: 20px;
+        display: grid;
+        grid-template-columns: 30rem 30rem;
+        grid-template-rows: 30rem 30rem 30rem 30rem 30re 30rem ;
+        justify-content: space-around;
+        align-items: center;
+        grid-area: auto;
+    }
+
+    .grid-box {
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        
+        border-radius: 30px;
+        background: linear-gradient(rgb(15, 228, 240), rgb(12, 56, 149), rgb(10, 10, 1));
+        padding: 1rem;
+        border-radius: 20px;
+        height: 400px;
+        color: white;
+        box-shadow: 20px 20px 10px black;
+        transition: all ease-in-out 0.5s;
+    }
+    .grid-box:hover{
+        filter: drop-shadow(8px 8px 8px rgb(248, 4, 37));
+          cursor: pointer;
+          opacity: 0.7;
+          scale: 1.03;
+    }
+
+}
